@@ -16,6 +16,6 @@ public class TestAutoOneMotor extends LinearOpMode {
 
         testMotor.setTargetPosition(5000);
 
-        //this is a test
+
     }
 }
