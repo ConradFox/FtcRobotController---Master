@@ -15,5 +15,7 @@ public class TestAutoOneMotor extends LinearOpMode {
         testMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
         testMotor.setTargetPosition(5000);
+
+        //this is a test
     }
 }
