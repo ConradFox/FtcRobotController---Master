@@ -12,9 +12,12 @@ public class TestAutoOneMotor extends LinearOpMode {
 
         DcMotor testMotor = hardwareMap.dcMotor.get("testMotor");
 
-        testMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        testMotor.setPower(1);
 
-        testMotor.setTargetPosition(5000);
+
+       /* testMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        testMotor.setTargetPosition(5000);*/
 
     }
 }
