@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+
 @TeleOp
 public class OneMotorTeleOp extends LinearOpMode {
     @Override
@@ -15,11 +16,17 @@ public class OneMotorTeleOp extends LinearOpMode {
         waitForStart();
 
         double tgtPower = 0;
-        while (opModeIsActive()); {
+        while (opModeIsActive());
+        {
 
 
             tgtPower = -this.gamepad1.left_stick_y;
             testMotor.setPower(tgtPower);
+
+            telemetry.addData("Target Power", tgtPower);
+            telemetry.addData("Motor Power", testMotor.getPower());
+            telemetry.addData("Status", "Running");
+            telemetry.update();
         }
     }
 }

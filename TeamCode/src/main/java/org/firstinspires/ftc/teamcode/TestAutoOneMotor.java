@@ -7,17 +7,15 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 @Autonomous
 public class TestAutoOneMotor extends LinearOpMode {
     @Override
+
     public void runOpMode() throws InterruptedException {
        waitForStart();
 
         DcMotor testMotor = hardwareMap.dcMotor.get("testMotor");
 
-        testMotor.setPower(1);
+       testMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-
-       /* testMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-
-        testMotor.setTargetPosition(5000);*/
+        testMotor.setTargetPosition(5000);
 
     }
 }
